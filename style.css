@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+--soft-blue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+
+/* ### Neutral */
+
+--main-bg: hsl(217, 54%, 11%);
+--card-bg: hsl(216, 50%, 16%);
+--line: hsl(215, 32%, 27%);
+--white: hsl(0, 0%, 100%);
+}
+img{
+    max-width: 100%;
+    border-radius: 0.7rem;
+}
+ul{
+    list-style: none;
+}
+.container h2{
+    font-weight: 600px;
+    color: var(--white);
+    margin: 1rem, 0.5rem 0.5rem 0;
+}
+.container h2:hover{
+    color: var(--cyan);
+    transition: 0.5s ease-in-out;
+}
+.container ul li{
+    display: flex;
+    align-items: center;
+}
+.container ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--line);
+}
+.container ul li:first-child{
+    color: var(--cyan);
+}
+.container ul li img{
+    margin-right: 0.5rem;
+}
+p{
+    font-weight: 300px;
+}
+body{
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: var(--main-bg);
+    color: hsl(0, 0%, 100%, 60%);
+    padding: 1.25rem;
+}
+.container {
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    box-shadow: 0px 14px 1px hsl(215, 54%, 9%);
+    border-radius: 1rem;
+}
+.container .main-img{
+    position: relative;
+}
+.container .main-img div{
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 50%, 40%);
+    width: 100%;
+    height: calc(100% - 4px);
+    border-radius: 1rem;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.container .main-img div:hover{
+    opacity: 1;
+}
+.container .main-img div img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+}
+.avatar{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 2rem;
+    
+}
+.container .avatar img{
+    width: 2.5rem;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+span{
+    color: var(--white);
+    font-weight: 400px;
+}
+
+.container .avatar p span:hover{
+    color: var(--cyan);
+    transition: 0.5s ease-in-out;
+}
+.attribution {
+    font-size: 18px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  
+  @media(min-width: 500px){
+      .container{
+          width: 450px;
+          margin: 0 auto 1rem;
+      }
+  }
